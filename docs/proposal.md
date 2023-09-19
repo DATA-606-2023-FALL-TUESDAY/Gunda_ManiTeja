@@ -34,11 +34,12 @@ can integrate these models trained from these datasets to provide users with rea
 
 
 ### Research Questions
-- What are the key factors that correlate with smoking and drinking habits in the dataset's population?
-- Can machine learning models accurately classify individuals as smokers or non-smokers based on their health parameters, and if so,
-  which features are most indicative of smoking status?
-- Similarly, can we accurately classify individuals as drinkers or non-drinkers based on their health parameters and habits, and
-  which features are most indicative of drinking status?
+- Is smoking and drinking really independent of each other? Do all drinkers smoke or Do all smokers drink?
+- Is it true that the majority of drinkers/smokers are men? What percent of smokers or drinkers are women?
+- What age groups do the majority of smokers/drinkers belong to?
+- What are some key health indicators (features) that correlate with smoking and/or drinking habits?
+- How do different machine learning techniques (linear vs. non-linear) compare in the identification of smoking & drinking habits based on their health parameters and which models can most accurately classify individuals?
+- As per the best performing models, which features are most important for identifying smoking status or drinking status?
 
 
 ## Data 
