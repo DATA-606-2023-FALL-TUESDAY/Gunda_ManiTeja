@@ -59,7 +59,7 @@ can integrate these models trained from these datasets to provide users with rea
   | Age             | Numerical (int)   | The age of the individual, categorized into 5-year age intervals.                                       | 35, 40, 45, 50, |
   | Height          | Numerical (int)   | The height of the individual, measured in 5cm increments.                                              | 165, 170, 175, 180                    |
   | Weight          | Numerical (int)   | The weight of the individual, measured in 5kg increments.                                              | 55, 60, 65, 70                      |
-  | Waist           | Numerical (float) | The circumference of the individual's waist.                                                           | 89, 90, 91, 92                    |
+  | Waist           | Numerical (int) | The circumference of the individual's waist.                                                           | 89, 90, 91, 92                    |
   | sight_left      | Categorical (float) | The visual acuity of the individual's left eye. | 0.9, 1.0, 1.2, 1.5                      |
   | sight_right     | Categorical (int) | The visual acuity of the individual's right eye.     | 0.9, 1.0, 1.2, 1.5                      |
   | hear_left       | Categorical (int) | The hearing status in the left ear of the individual, with 1 representing normal hearing and 2 representing abnormal hearing. | 1, 2                      |
