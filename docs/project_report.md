@@ -89,10 +89,10 @@ can integrate these models trained from these datasets to provide users with rea
 
 EDA is performed in order to understand the data, answer the research questions and get some insights
 
-- 'df.shape()' : Shape of the data - 991346 rows and 24 columns
-- 'df.dtypes' : To check the data types of all columns
-- 'df.duplicated()' : There are 26 duplicate rows
-- 'df.isna()' : To check the null values. There are no null values in any column
+- df.shape : Shape of the data - 991346 rows and 24 columns
+- df.dtypes : To check the data types of all columns
+- df.duplicated() : There are 26 duplicate rows
+- df.isna() : To check the null values. There are no null values in any column
 
 ### Distribution Histogram
 
