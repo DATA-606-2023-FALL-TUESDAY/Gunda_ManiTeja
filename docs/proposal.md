@@ -87,12 +87,95 @@ can integrate these models trained from these datasets to provide users with rea
 
 ## Exploratory Data Analysis (EDA)
 
-- Calculate summary statistics for all numerical features, such as mean, median, standard deviation, and percentiles.
-- Check for missing values, duplicates and handle them.
-- Identify and handle outliers that may impact the accuracy of classification models.
-- Explore correlations between health parameters, like blood pressure, cholesterol levels, and hemoglobin, to identify potential associations.
-- Investigate how health parameters vary with age and gender, as these factors can influence health outcomes.
-- Determine the importance of each feature in classifying smokers and drinkers using appropriate feature selection techniques (During the modeling phase).
+EDA is performed in order to understand the data, answer the research questions and get some insights
+
+- 'df.shape()' : Shape of the data - 991346 rows and 24 columns
+- 'df.dtypes' : To check the data types of all columns
+- 'df.duplicated()' : There are 26 duplicate rows
+- 'df.isna()' : To check the null values. There are no null values in any column
+
+ ### Is smoking and drinking really independent of each other? Do all drinkers smoke or Do all smokers drink?
+
+<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/r1.png">
+
+From the above plot, we can see that:
+- Majority of the non-drinkers are non-smokers
+- While majority of drinkers are non smokers, the gap between each of the smoking state is less
+- The number of drinkers who smoke are approximately three times the number of non-drinkers who smoke
+
+### Is it true that the majority of drinkers/smokers are men? What percent of smokers or drinkers are women?
+
+<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/r2_1.png">
+
+<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/r2_2.png">
+
+From the above plot, we can see that:
+
+- Approximately 70% of the drinkers are male
+- Non-drinking female is almost twice the number of non-drinking male
+- Majority of the non-smokers are female
+- Male population dominates in both the states of still smoking and quit smoking
+
+### What age groups do the majority of smokers/drinkers belong to?¶
+
+<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/r3_1.png">
+
+<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/r3_2.png">
+
+- Most of the smokers are between 35 and 50 years
+- Most of the drinkers are between 30 and 50 years
+
+### What are some key health indicators (features) that correlate with smoking and/or drinking habits?¶
+
+To answer this question, we need to see the correlation matrix to see the inter relation between columns.
+
+<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/r4.png">
+
+Using "Recursive Feature Elemination" method to select the features for smoking and drinking seperately. These are the selected features:
+
+Smoking:
+- hear_left
+- SBP
+- hemoglobin
+- age
+- hear_right
+- sex
+- height
+- HDL_chole
+- waistline
+- serum_creatinine
+- weight
+
+Drinking: 
+- hear_left
+- urine_protein
+- sight_right
+- age
+- hear_right
+- SGOT_ALT
+- gamma_GTP
+- DBP
+- sex
+- HDL_chole
+- serum_creatinine
+
+Common features for both smoking and drinking:
+- DBP
+- HDL_chole
+- SBP
+- SGOT_ALT
+- age
+- gamma_GTP
+- hear_left
+- hear_right
+- height
+- hemoglobin
+- serum_creatinine
+- sex
+- sight_right
+- urine_protein
+- waistline
+- weight
 
 
 ## Model Training 
