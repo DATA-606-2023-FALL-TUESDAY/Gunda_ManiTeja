@@ -94,7 +94,25 @@ EDA is performed in order to understand the data, answer the research questions 
 - 'df.duplicated()' : There are 26 duplicate rows
 - 'df.isna()' : To check the null values. There are no null values in any column
 
- ### Is smoking and drinking really independent of each other? Do all drinkers smoke or Do all smokers drink?
+### Distribution Histogram
+
+This is a Histogram for all the columns of the dataset
+
+<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/i1.png">
+
+### Drinking State
+
+<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/i2.png">
+
+The data has almost equal number of drinkers and non-drinkers
+
+### Smoking State
+
+<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/i3.png">
+
+Majority of the data shows non-smokers, followed by smokers and then those who quit smoking
+
+### Is smoking and drinking really independent of each other? Do all drinkers smoke or Do all smokers drink?
 
 <img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/r1.png">
 
