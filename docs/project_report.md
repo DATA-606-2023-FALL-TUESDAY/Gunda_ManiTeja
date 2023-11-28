@@ -1,6 +1,7 @@
 # Predicting smokers and drinkers using body signal data
 
 - Author - Mani Teja Gunda
+- Semester - Fall-2023
 - Prepared for UMBC Data Science Master Degree Capstone by Dr Chaojie (Jay) Wang
 - GitHub - <a href="https://github.com/gunda18"> gunda18 </a>
 - LinkedIn - <a href="https://www.linkedin.com/in/mani-teja-gunda-78a1bb137"> Mani Teja Gunda </a>
