@@ -99,23 +99,23 @@ EDA is performed in order to understand the data, answer the research questions 
 
 This is a Histogram for all the columns of the dataset
 
-<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/i1.png">
+<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/histogram_all.png">
 
 ### Drinking State
 
-<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/i2.png">
+<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/drinking_count.png">
 
 The data has almost equal number of drinkers and non-drinkers
 
 ### Smoking State
 
-<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/i3.png">
+<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/smoking_count.png">
 
 Majority of the data shows non-smokers, followed by smokers and then those who quit smoking
 
 ### Is smoking and drinking really independent of each other? Do all drinkers smoke or Do all smokers drink?
 
-<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/r1.png">
+<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/smoking_vs_drinking.png">
 
 From the above plot, we can see that:
 - Majority of the non-drinkers are non-smokers
@@ -124,9 +124,9 @@ From the above plot, we can see that:
 
 ### Is it true that the majority of drinkers/smokers are men? What percent of smokers or drinkers are women?
 
-<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/r2_1.png">
+<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/gender_vs_drinking.png">
 
-<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/r2_2.png">
+<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/gender_vs_smoking.png">
 
 From the above plot, we can see that:
 
@@ -137,9 +137,9 @@ From the above plot, we can see that:
 
 ### What age groups do the majority of smokers/drinkers belong to?¶
 
-<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/r3_1.png">
+<img width="1000" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/age_drinking.png">
 
-<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/r3_2.png">
+<img width="1000" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/age_smoking.png">
 
 - Most of the smokers are between 35 and 50 years
 - Most of the drinkers are between 30 and 50 years
@@ -148,7 +148,7 @@ From the above plot, we can see that:
 
 To answer this question, we need to see the correlation matrix to see the inter relation between columns.
 
-<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/r4.png">
+<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/correlation.png">
 
 Using "Recursive Feature Elemination" method to select the features for smoking and drinking seperately. These are the selected features:
 
