@@ -337,15 +337,41 @@ Common features for both smoking and drinking:
 - Except for ROC scores, Linear Regression has topped in all the scores, the ROC score is pertty close to the scores of Random Forest and Gradient Boosting models
 
 
-## Application of the Trained Models
+## Application of the Trained Models - Streamlit Web Application
 
-Develop a web app for people to interact with your trained models using Streamlit.
-- TBA
+- Developed a web application using streamlit.
+- The streamlit web page contains several areas of input where the user is asked to enter the values like height, weight, eye sight, cholestrol etc.
+- Once the input is given, the user should select if they want to predict smoking or drinking.
+- When submitted, the result will be displayed below the submit button.
+
+<p float="left">
+  <img src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/streamlit_1.png" width="500" height="1300" />
+  <img src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/streamlit_2.png" width="500" height="1300" /> 
+</p>
+
 
 ## 7. Conclusion
 
-- TBA
+### Summary of Project
+In summary, this project embarked on the journey of predicting smoking and drinking habits based on health metrics. Leveraging a diverse dataset, we delved into the intricacies of the relationships between various health indicators and these habits. Through meticulous exploratory data analysis and model training, we aimed to provide actionable insights for various stakeholders.
+
+### Potential Applications
+The application of our predictive models spans across multiple domains. From healthcare professionals using more precise risk assessment tools to governments designing targeted public health campaigns, the implications are far-reaching. Insurance companies can benefit from adjusting premiums based on accurate risk assessments, and individuals can receive personalized feedback through health tracking wearables.
+
+### Limitations
+It's essential to acknowledge the limitations of our work. The predictions provided by the models are based on correlations observed in the dataset and may not imply causation. Furthermore, the accuracy of predictions relies heavily on the quality and representativeness of the dataset.
+
+### Lessons Learned
+Throughout the project, we learned valuable lessons in data preprocessing, model selection, and the importance of interpretability. The agile approach allowed us to adapt to challenges and refine our models continuously.
+
 
 ## 8. References 
 
-- TBA
+- Kaggle datasets: Smoking and Drinking Dataset with body signal
+  - **Source:** https://www.kaggle.com/datasets/sooyoungher/smoking-drinking-dataset?resource=download
+- Streamlit documentation:
+  - **Source:** https://docs.streamlit.io/
+- Scikit-Learn documentation:
+  - **Source:** https://scikit-learn.org/stable/index.html
+- Liver Disease Prediction using Machine learning Classification Techniques by Ketan Gupta; Nasmin Jiwani; Neda Afreen; Divyarani D
+  - **Source:** https://ieeexplore.ieee.org/document/9787574
