@@ -152,59 +152,189 @@ To answer this question, we need to see the correlation matrix to see the inter 
 
 Using "Recursive Feature Elemination" method to select the features for smoking and drinking seperately. These are the selected features:
 
+
 Smoking:
-- hear_left
-- SBP
-- hemoglobin
 - age
-- hear_right
 - sex
-- height
 - HDL_chole
-- waistline
+- hear_left
+- hear_right
 - serum_creatinine
+- hemoglobin
+- waistline
+- SBP
 - weight
+- height
 
 Drinking: 
-- hear_left
-- urine_protein
-- sight_right
 - age
-- hear_right
-- SGOT_ALT
-- gamma_GTP
-- DBP
 - sex
 - HDL_chole
+- hear_left
+- hear_right
 - serum_creatinine
+- hemoglobin
+- SGOT_ALT
+- DBP
+- gamma_GTP
+- sight_right
 
 Common features for both smoking and drinking:
-- DBP
-- HDL_chole
-- SBP
-- SGOT_ALT
 - age
-- gamma_GTP
+- sex
+- HDL_chole
 - hear_left
 - hear_right
-- height
-- hemoglobin
 - serum_creatinine
-- sex
-- sight_right
-- urine_protein
-- waistline
-- weight
+- hemoglobin
 
 
-## Model Training 
+## Model Training
 
-- As data size is moderately large, I plan to use google colab/kaggle to train the models.
-- Python packages to be used: scikit-learn, pandas, matplotlib, seaborn.
-- Train/Test data: Split the data to create train (70%) & test (30%) splits.
-- Feature Creation/transformation: Write code to transform categorical features into numerical features.
-- Modeling: start with basic models like KNN, logistic regression, decision tree and move to more complex ones such as random forest and gradient boosting.
-- Metrics & Evaluation:  As this is a classification task, Accuracy scores, f1-score and confusion matrices will be used for performance measurement.
+- As the objective is to predict if a person is smoking or not and if a person is drinking or not, we are going to use classification models
+- For model training, the data is split into two parts:
+  - 70% of the data is used for training the models - 693,924 rows
+  - 30% of the data is used for testing the models - 297,396 rows
+- As two kinds of predictions are done here, models are trained seperately for drinking and smoking
+- The models to be trained are:
+  - K Nearest Neighbors (KNN)
+  - Logistic Regression
+  - Decision Tree
+  - Random Forest
+  - Gradient Boosting
+
+## Model Evaluation - Drinking
+
+### KNN
+- Accuracy: The accuracy score of the model is 0.669101. This means that approximately 66.91% of the predictions were correct.
+- Precision: The precision score of the model is 0.666609. This indicates that about 66.66% of the positive predictions made by the model were correct.
+- A recall of 0.675707 means that the model correctly identified approximately 67.57% of all actual positives.
+- An F1 score of 0.671127 suggests a fairly balanced performance between precision and recall.
+- A score of 0.669105 indicates the model's ability to distinguish between classes.
+
+<p float="left">
+  <img src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/d_knn_1.png" width="500" height="500" />
+  <img src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/d_knn_2.png" width="500" height="500" /> 
+</p>
+
+
+### Logistic Regression
+- Accuracy: The accuracy score of the model is 0.719384. This means that approximately 71.93% of the predictions were correct.
+- Precision: The precision score of the model is 0.718072. This indicates that about 71.80% of the positive predictions made by the model were correct.
+- A recall of 0.721783 means that the model correctly identified approximately 72.17% of all actual positives.
+- An F1 score of 0.719923 suggests a fairly balanced performance between precision and recall but better than the KNN.
+- A score of 0.719386 indicates the model's ability to distinguish between classes.
+
+<p float="left">
+  <img src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/d_lr_1.png" width="500" height="500" />
+  <img src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/d_lr_2.png" width="500" height="500" /> 
+</p>
+
+### Decision Tree
+- Accuracy: The accuracy score of the model is 0.635570. This means that approximately 63.55% of the predictions were correct.
+- Precision: The precision score of the model is 0.635321. This indicates that about 63.53% of the positive predictions made by the model were correct.
+- A recall of 0.635363 means that the model correctly identified approximately 63.53% of all actual positives.
+- An F1 score of 0.635342 suggests a moderately fair balanced performance between precision and recall.
+- A score of 0.635570 indicates the model's ability to distinguish between classes.
+
+<p float="left">
+  <img src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/d_dt_1.png" width="500" height="500" />
+  <img src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/d_dt_2.png" width="500" height="500" /> 
+</p>
+
+
+### Random Forest
+- Accuracy: The accuracy score of the model is 0.720733. This means that approximately 72.07% of the predictions were correct.
+- Precision: The precision score of the model is 0.716712. This indicates that about 71.67% of the positive predictions made by the model were correct.
+- A recall of 0.729401 means that the model correctly identified approximately 72.94% of all actual positives.
+- An F1 score of 0.723001 suggests a fair balanced performance between precision and recall.
+- A score of 0.720738 indicates the model's ability to distinguish between classes.
+
+<p float="left">
+  <img src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/d_rf_1.png" width="500" height="500" />
+  <img src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/d_rf_2.png" width="500" height="500" /> 
+</p>
+
+
+### Gradient Boosting
+- Accuracy: The accuracy score of the model is 0.712084. This means that approximately 71.20% of the predictions were correct.
+- Precision: The precision score of the model is 0.696168. This indicates that about 69.61% of the positive predictions made by the model were correct.
+- A recall of 0.751978 means that the model correctly identified approximately 75.19% of all actual positives.
+- An F1 score of 0.722998 suggests a fair balanced performance between precision and recall.
+- A score of 0.712110 indicates the model's ability to distinguish between classes.
+
+<p float="left">
+  <img src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/d_gb_1.png" width="500" height="500" />
+  <img src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/d_gb_2.png" width="500" height="500" /> 
+</p>
+
+
+### Model Comparision 
+
+<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/d_compare.png">
+
+- Random Forest has highest accuracy overall.
+- Though Random Forest does not top in all other scores, it showed consistent performance overall.
+
+
+## Model Evaluation - Smoking
+
+### KNN
+- Accuracy: The accuracy score of the model is 0.641004. This means that approximately 64.10% of the predictions were correct.
+- Precision: The precision score of the model is 0.612603. This indicates that about 61.23% of the positive predictions made by the model were correct.
+- A recall of 0.641004 means that the model correctly identified approximately 64.10% of all actual positives.
+- An F1 score of 0.622709 suggests a fairly balanced performance between precision and recall.
+- A score of 0.739050 indicates the model's ability to distinguish between classes.
+
+<img src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/s_knn_1.png" width="500" height="500" />
+
+
+### Logistic Regression
+- Accuracy: The accuracy score of the model is 0.670345. This means that approximately 67.03% of the predictions were correct.
+- Precision: The precision score of the model is 0.702312. This indicates that about 70.23% of the positive predictions made by the model were correct.
+- A recall of 0.670345 means that the model correctly identified approximately 67.03% of all actual positives.
+- An F1 score of 0.679611 suggests a fairly balanced performance between precision and recall.
+- A score of 0.818277 indicates the model's ability to distinguish between classes.
+
+<img src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/s_lr_1.png" width="500" height="500" />
+
+
+### Decision Tree
+- Accuracy: The accuracy score of the model is 0.605465. This means that approximately 60.54% of the predictions were correct.
+- Precision: The precision score of the model is 0.608824. This indicates that about 60.88% of the positive predictions made by the model were correct.
+- A recall of 0.605465 means that the model correctly identified approximately 60.54% of all actual positives.
+- An F1 score of 0.607108 suggests a moderately fair balanced performance between precision and recall.
+- A score of 0.635952 indicates the model's ability to distinguish between classes.
+
+<img src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/s_dt_1.png" width="500" height="500" />
+
+
+### Random Forest
+- Accuracy: The accuracy score of the model is 0.668711. This means that approximately 66.87% of the predictions were correct.
+- Precision: The precision score of the model is 0.670010. This indicates that about 67% of the positive predictions made by the model were correct.
+- A recall of 0.668711 means that the model correctly identified approximately 66.87% of all actual positives.
+- An F1 score of 0.679611 suggests a fair balanced performance between precision and recall.
+- A score of 0.818277 indicates the model's ability to distinguish between classes.
+
+<img src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/s_rf_1.png" width="500" height="500" />
+
+
+### Gradient Boosting
+- Accuracy: The accuracy score of the model is 0.634649. This means that approximately 63.46% of the predictions were correct.
+- Precision: The precision score of the model is 0.680251. This indicates that about 68.02% of the positive predictions made by the model were correct.
+- A recall of 0.634649 means that the model correctly identified approximately 63.46% of all actual positives.
+- An F1 score of 0.540130 suggests a fair balanced performance between precision and recall.
+- A score of 0.827955 indicates the model's ability to distinguish between classes.
+
+<img src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/s_gb_1.png" width="500" height="500" />
+
+
+### Model Comparision 
+
+<img width="600" alt="image" src="https://github.com/gunda18/UMBC-DATA606-FALL2023-TUESDAY/blob/main/ref_pics/s_compare.png">
+
+- Linear Regression has highest accuracy overall.
+- Except for ROC scores, Linear Regression has topped in all the scores, the ROC score is pertty close to the scores of Random Forest and Gradient Boosting models
 
 
 ## Application of the Trained Models
