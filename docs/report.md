@@ -5,7 +5,7 @@
 - Prepared for UMBC Data Science Master Degree Capstone by Dr Chaojie (Jay) Wang
 - GitHub - <a href="https://github.com/gunda18"> gunda18 </a>
 - LinkedIn - <a href="https://www.linkedin.com/in/mani-teja-gunda-78a1bb137"> Mani Teja Gunda </a>
-- <a href="https://github.com/DATA-606-2023-FALL-TUESDAY/Gunda_ManiTeja/blob/main/docs/Presentation.pptx"> <img src="https://img.shields.io/badge/-PowerPoint Presentation Download-B7472A?logo=microsoftpowerpoint&style=flat" alt="icon | GitHub"/> </a>
+- <a href="https://github.com/DATA-606-2023-FALL-TUESDAY/Gunda_ManiTeja/blob/main/docs/Presentation.pptx"> <img src="https://img.shields.io/badge/-PowerPoint Presentation Download-B7472A?logo=microsoftpowerpoint&style=flat" alt="icon | PPT"/> </a>
 - <a href="https://www.youtube.com/"> <img src="https://img.shields.io/badge/-YouTube Presentation-FF0000?logo=youtube&style=flat" alt="icon | YouTube"/></a> 
     
 ## Background
